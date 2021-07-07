@@ -5,6 +5,7 @@ import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
 import { ThemeProvider } from 'styled-components/native';
 import { theme } from './theme';
+import Navigation from './screens';
 
 const cacheImages = images => {
     return images.map(image => {
@@ -31,6 +32,7 @@ const cacheImages = images => {
     return isReady ? (
         <ThemeProvider theme={theme}>
             <StatusBar barStyle="dark-content" />
+            <Navigation />
         </ThemeProvider>
     ) : (
         <AppLoading
