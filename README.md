@@ -5,6 +5,7 @@ logIn, signUp, profile, makeChannel, channelList, channel
 
 ## Getting Started / 어떻게 시작하나요?
 cd react-native-chatapp
+
 expo start
 
 ### Prerequisites / 선행 조건
