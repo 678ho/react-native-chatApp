@@ -1,6 +1,10 @@
 # Chat app for Android ( React-Native)
 
 ## Getting Started / 어떻게 시작하나요?
+expo 및 android studio 설치 후 가상 머신 설정
+
+cmd 실행 후
+
 cd react-native-chatapp
 
 expo start
