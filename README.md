@@ -1,8 +1,5 @@
 # Chat app for Android ( React-Native)
 
-**[뱃지나 프로젝트에 관한 이미지들이 이 위치에 들어가면 좋습니다]**  
-logIn, signUp, profile, makeChannel, channelList, channel
-
 ## Getting Started / 어떻게 시작하나요?
 cd react-native-chatapp
 
@@ -60,10 +57,16 @@ firebase // Google Firebase 연동.
 │   └── utils
 └── App.js
 ``` 
-### 테스트는 이런 식으로 동작합니다
-
-왜 이렇게 동작하는지, 설명합니다
+### 기능 설명
 
 ```
-예시
+로그인/회원가입 : 이메일과 비밀번호를 이용한 로그인과 회원가입
+
+프로필 : 나의 정보확인 및 변경
+
+채널 생성: 채널 생성 기능
+
+채널 목록 : 생성된 채널들의 목록 조회
+
+채널 : 실시간으로 메시지를 송수신하는 독립된 공간
 ```
