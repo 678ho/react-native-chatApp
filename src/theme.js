@@ -48,4 +48,8 @@ const colors = {
     sendButtonActivate: colors.blue,
     sendButtonInactivate: colors.grey_1,
   };
+
+  /* 
+    공통으로 사용할 색을 정의하고 배경색과 글자의 색을 정의.
+  */
   
