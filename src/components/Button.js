@@ -13,6 +13,10 @@ const Container = styled.TouchableOpacity`
   padding: 10px;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;
+//사용자에게 버튼 동작 여부를 시각적으로 명확하게 알리도록 수정.
+
+
+
 const Title = styled.Text`
   height: 30px;
   line-height: 30px;
@@ -47,3 +51,4 @@ Button.propTypes = {
 };
 
 export default Button;
+/* props로 전달된 isFilled의 값에 따라 버튼 내부를 채우거나 투명하게 처리하는 Button컴포넌트 생성. */

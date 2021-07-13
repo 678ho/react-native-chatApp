@@ -93,3 +93,6 @@ Input.propTypes = {
 };
 
 export default Input;
+/* 라벨을 TextInput 컴포넌트 위에 렌더링하고 포커스 여부에 따라 스타일이 변경되는 Input컴포넌트를 생성.
+secureTextEntry 속성은 입력되는 문자를 감추는 기능으로 비밀번호 입력하는곳에 많이 사용됨.
+*/

@@ -5,7 +5,7 @@ import { Image, Input, Button } from '../components';
 import { images } from '../utils/images';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { validateEmail, removeWhitespace } from '../utils/common';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context'; //노치 디자인 대응.
 import { Alert } from 'react-native';
 import { login } from '../utils/firebase';
 
@@ -31,7 +31,10 @@ const Login = ({ navigation }) => {
   const { dispatch } = useContext(UserContext);
   const { spinner } = useContext(ProgressContext);
   const insets = useSafeAreaInsets();
-
+  
+  
+  //입력되는 이메일과 비밀번호를 관리할 email, password를 useState함수를 이용해 생성하고 각각 입력받는 Input컴포넌트의 value로 지정.
+  //(비밀번호를 입력받는 컴포넌트는 입력값이 보이지 않도록 isPassword 속성 추가.)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const passwordRef = useRef();
@@ -40,13 +43,13 @@ const Login = ({ navigation }) => {
 
   useEffect(() => {
     setDisabled(!(email && password && !errorMessage));
-  }, [email, password, errorMessage]);
+  }, [email, password, errorMessage]); //useEffect를 사용해 각 속성의 상태가 변할 때마다 조건에 맞게 disabled의 상태가 변경되도록 작성.
 
   const _handleEmailChange = email => {
     const changedEmail = removeWhitespace(email);
     setEmail(changedEmail);
     setErrorMessage(
-      validateEmail(changedEmail) ? '' : 'Please verify your email.'
+      validateEmail(changedEmail) ? '' : 'Please verify your email.' //입력되는 값이 올바른 이메일 형식인지 확인하고 알맞은 에러메시지를 렌더링하는 기능 추가.
     );
   };
   const _handlePasswordChange = password => {
@@ -75,7 +78,7 @@ const Login = ({ navigation }) => {
           label="Email"
           value={email}
           onChangeText={_handleEmailChange}
-          onSubmitEditing={() => passwordRef.current.focus()}
+          onSubmitEditing={() => passwordRef.current.focus()} //returnKeyType을 각각 지정한 후 누르면 포커스가 이동하도록 하는 기능을 추가.
           placeholder="Email"
           returnKeyType="next"
         />
@@ -84,7 +87,7 @@ const Login = ({ navigation }) => {
           label="Password"
           value={password}
           onChangeText={_handlePasswordChange}
-          onSubmitEditing={_handleLoginButtonPress}
+          onSubmitEditing={_handleLoginButtonPress} //Button Component 사용
           placeholder="Password"
           returnKeyType="done"
           isPassword
@@ -92,7 +95,7 @@ const Login = ({ navigation }) => {
         <ErrorText>{errorMessage}</ErrorText>
         <Button
           title="Login"
-          onPress={_handleLoginButtonPress}
+          onPress={_handleLoginButtonPress} //Button Component 사용
           disabled={disabled}
         />
         <Button
@@ -106,3 +109,7 @@ const Login = ({ navigation }) => {
 };
 
 export default Login;
+
+/* 
+  
+*/

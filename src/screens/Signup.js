@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from 'react';
 import { ProgressContext, UserContext } from '../contexts';
 import styled from 'styled-components/native';
 import { Image, Input, Button } from '../components';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; //화면 스크롤
 import { validateEmail, removeWhitespace } from '../utils/common';
 import { images } from '../utils/images';
 import { Alert } from 'react-native';
@@ -142,3 +142,5 @@ const Signup = () => {
 };
 
 export default Signup;
+
+//useEffect를 사용해 관련된 값이 변할 때마다 적절한 오류 메시지가 렌더링 되도록 작성.

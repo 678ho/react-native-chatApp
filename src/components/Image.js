@@ -102,3 +102,4 @@ Image.propTypes = {
 };
 
 export default Image;
+// props로 전달되는 url을 렌더링하고 imageStyle을 전달받아 컴포넌트의 스타일을 수정할수있는 Image 컴포넌트 생성.
