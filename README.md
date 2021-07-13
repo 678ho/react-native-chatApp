@@ -37,24 +37,35 @@ firebase // Google Firebase 연동.
 │   ├── splash.png
 │   └── favicon.png
 ├── src
-│   ├── components
+│   ├── components (컴포넌트 파일 관리)
 |   │   ├── Button.js
 |   │   ├── Image.js
 |   │   ├── index.js
 |   │   ├── Input.js
 |   │   └── Spinner.js
-│   ├── contexts
+│   ├── contexts (Context API파일 관리)
 |   │   ├── index.js
 |   │   ├── Progress.js
 |   │   └── User.js
-│   ├── navigations
+│   ├── navigations (내비게이션 파일 관리)
 |   │   ├── AuthStack.js
 |   │   ├── index.js
 |   │   ├── MainStack.js
 |   │   └── MainTab.js
-│   ├── App.js
+│   ├── screens (화면 파일관리)
+|   │   ├── Channel.js
+|   │   ├── ChannelCreation.js
+|   │   ├── ChannelList.js
+|   │   ├── index.js
+|   │   ├── Login.js
+|   │   ├── Profile.js 
+|   │   └── Signup.js
+│   ├── utils (프로젝트에서 이용할 기타 기능 관리)
+|   │   ├── common.js 
+|   │   ├── firebase.js
+|   │   └── images.js
 │   ├── theme.js
-│   └── utils
+│   └── App.js
 └── App.js
 ``` 
 ### 기능 설명
