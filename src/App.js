@@ -8,7 +8,7 @@ import { theme } from './theme';
 import Navigation from './navigations';
 import { images } from './utils/images';
 import { ProgressProvider, UserProvider } from './contexts';
-
+/* */
 const cacheImages = images => {
   return images.map(image => {
     if (typeof image === 'string') {
