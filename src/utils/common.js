@@ -8,3 +8,4 @@ export const validateEmail = email => {
     return text.replace(regex, '');
   };
   
+  /* 올바른 이메일 형식인지 확인하는 함수와 입력된 문자열에서 공백을 모두 제거하는 함수. */
